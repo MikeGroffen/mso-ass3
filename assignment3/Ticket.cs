@@ -25,7 +25,12 @@ namespace Lab3
         {
             Ticketinfo ticketinfo = new Ticketinfo(); 
 
-            return "Ticket" + "\n" + "From: " + info.From + "\n" + "To: " + info.To + "\n" + "class: " + ticketinfo.clss(info) + "\n" + "Tickettype: " + ticketinfo.type(info) + "\n" + "Discount: " + ticketinfo.discount(info) + "\n";
+            return "Ticket" + "\n" 
+                + "From: " + info.From + "\n" 
+                + "To: " + info.To + "\n" 
+                + "class: " + ticketinfo.clss(info) + "\n" 
+                + "Tickettype: " + ticketinfo.type(info) + "\n" 
+                + "Discount: " + ticketinfo.discount(info) + "\n";
         }
     }
 }
