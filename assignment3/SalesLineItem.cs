@@ -10,29 +10,14 @@ namespace Lab3
         //berekent het subtotal die vervolgens word gebrhikt in de sales
         public float CalcSubTotal(UIInfo info)
         {
-            int clss;
-            int discount;
+            Ticketinfo ticketinfo = new Ticketinfo();
 
             // Get number of tariefeenheden
             int tariefeenheden = Tariefeenheden.getTariefeenheden(info.From, info.To);
 
-            //kijkt welke class de gebruiker heeft geselecteert. 
-            if (info.Class == UIClass.FirstClass)
-                clss = 3;
-            else clss = 0;
-
-            //kijkt hoeveel korting de gebruikter krijgt
-            if (info.Discount == UIDiscount.TwentyDiscount)
-                discount = 1;
-            else if (info.Discount == UIDiscount.FortyDiscount)
-                discount = 2;
-            else discount = 0;
-
-            //berekent de totale tableColumn
-            int tableColumn = clss + discount;
-
             // Get price
-            float price = PricingTable.getPrice(tariefeenheden, tableColumn);
+            float price = PricingTable.getPrice(tariefeenheden, ticketinfo.Tablecolumn(info));
+
             if (info.Way == UIWay.Return)
             {
                 price *= 2;

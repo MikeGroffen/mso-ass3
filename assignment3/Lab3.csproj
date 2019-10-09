@@ -44,6 +44,7 @@
     <Compile Include="SalesLineItem.cs" />
     <Compile Include="tariefdatabase.cs" />
     <Compile Include="Ticket.cs" />
+    <Compile Include="Ticketinfo.cs" />
     <Compile Include="UI.cs">
       <SubType>Form</SubType>
     </Compile>

@@ -23,13 +23,9 @@ namespace Lab3
 
         public string GetTicketInfo(UIInfo info)
         {
-            string clss = info.Class.ToString();
-            string type = info.Way.ToString();
-            string discount = info.Discount.ToString();
-            string from = info.From;
-            string to = info.To;
+            Ticketinfo ticketinfo = new Ticketinfo(); 
 
-            return "Ticket" + "\n" + "From: " + from + "\n" + "To: " + to + "\n" + "class: " + clss + "\n" + "Tickettype: " + type + "\n" + "Discount: " + discount + "\n";
+            return "Ticket" + "\n" + "From: " + info.From + "\n" + "To: " + info.To + "\n" + "class: " + ticketinfo.clss(info) + "\n" + "Tickettype: " + ticketinfo.type(info) + "\n" + "Discount: " + ticketinfo.discount(info) + "\n";
         }
     }
 }
