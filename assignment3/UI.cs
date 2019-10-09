@@ -31,12 +31,14 @@ namespace Lab3
             else
             { 
                 sales sale = new sales();
-                Ticket ticket = new Ticket();
+                
                 betaling pay = new betaling();
                 pay.prijs = sale.CalcTotal(info);
                 pay.betaalmethode(info);
-                MessageBox.Show(ticket.GetTicketInfo(info));
                 MessageBox.Show(pay.betalinginfo(info));
+
+                Ticket ticket = new Ticket();
+                MessageBox.Show(ticket.GetTicketInfo(info));
 			}
 		}
 

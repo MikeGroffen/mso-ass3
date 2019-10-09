@@ -26,8 +26,10 @@ namespace Lab3
             string clss = info.Class.ToString();
             string type = info.Way.ToString();
             string discount = info.Discount.ToString();
+            string from = info.From;
+            string to = info.To;
 
-            return "class: " + clss + "\n" + "Tickettype: " + type + "\n" + "Discount: " + discount + "\n";
+            return "Ticket" + "\n" + "From: " + from + "\n" + "To: " + to + "\n" + "class: " + clss + "\n" + "Tickettype: " + type + "\n" + "Discount: " + discount + "\n";
         }
     }
 }

@@ -38,7 +38,7 @@ namespace Lab3
         public string betalinginfo(UIInfo info)
         {
             string payment = info.Payment.ToString();
-            return "Payment Method: " + payment + "\n" + "Date of pay: " + DateTime.Now;
+            return "Receipt" + "\n" + "Payment Method: " + payment + "\n" + "Price: " + prijs + "\n" +"Date of pay: " + DateTime.Now;
         }
     }
 }
