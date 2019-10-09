@@ -3,7 +3,7 @@ using System.Windows.Forms;
 
 namespace Lab3
 {
-	public class IKEAMyntAtare2000 
+	class IKEAMyntAtare2000 : betaling
 	{
 		public void starta()
 		{
@@ -20,6 +20,12 @@ namespace Lab3
             MessageBox.Show (pris + " cent" );
 		}
         
+        public override void Betaalmethode(UIInfo info, float prijs)
+        {
+            starta();
+            betala((int)Math.Round(prijs * 100));
+            stoppa();
+        }
 	}
 }
 

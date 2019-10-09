@@ -31,11 +31,9 @@ namespace Lab3
             else
             { 
                 sales sale = new sales();
-                
-                betaling pay = new betaling();
-                pay.prijs = sale.CalcTotal(info);
-                pay.betaalmethode(info);
-                MessageBox.Show(pay.betalinginfo(info));
+
+                sale.payment(info);
+                MessageBox.Show(sale.betalinginfo(info, sale.CalcTotal(info)));
 
                 Ticket ticket = new Ticket();
                 MessageBox.Show(ticket.GetTicketInfo(info));
