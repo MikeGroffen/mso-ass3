@@ -39,7 +39,10 @@
   <ItemGroup>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="sales.cs" />
+    <Compile Include="SalesLineItem.cs" />
     <Compile Include="tariefdatabase.cs" />
+    <Compile Include="Ticket.cs" />
     <Compile Include="UI.cs">
       <SubType>Form</SubType>
     </Compile>

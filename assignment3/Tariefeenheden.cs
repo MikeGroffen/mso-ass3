@@ -49,7 +49,7 @@ namespace Lab3
             //dit is verantwoordelijk voor het zoeken en terugsturen van het tarief 
             var tarief = Tariefdatabase.Find(x => (x.Station1 == from && x.Station2 == to) || (x.Station1 == to && x.Station2 == from));
             if (tarief == null)
-                return 0; // MessageBox.Show("Unkown Route"); 
+                return 0;
             else return tarief.Tarief; 
 		}
 	}

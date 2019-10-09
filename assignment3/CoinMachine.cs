@@ -17,8 +17,9 @@ namespace Lab3
 
 		public void betala(int pris)
 		{
-			MessageBox.Show (pris + " cent");
+            MessageBox.Show (pris + " cent" );
 		}
+        
 	}
 }
 
