@@ -35,30 +35,8 @@ namespace Lab3
                 betaling pay = new betaling();
                 pay.prijs = sale.CalcTotal(info);
                 pay.betaalmethode(info);
-                // Pay
-                /* switch (info.Payment)
-                {
-                    case UIPayment.CreditCard:
-                        CreditCard c = new CreditCard();
-                        c.Connect();
-                        int ccid = c.BeginTransaction(sale.CalcTotal(info));
-                        c.EndTransaction(ccid);
-                        break;
-                    case UIPayment.DebitCard:
-                        DebitCard d = new DebitCard();
-                        d.Connect();
-                        int dcid = d.BeginTransaction(sale.CalcTotal(info));
-                        d.EndTransaction(dcid);
-                        break;
-                    case UIPayment.Cash:
-                        IKEAMyntAtare2000 coin = new IKEAMyntAtare2000();
-                        coin.starta();
-                        coin.betala((int)Math.Round(sale.CalcTotal(info) * 100));
-                        coin.stoppa();
-                        break;
-                } */
-
                 MessageBox.Show(ticket.GetTicketInfo(info));
+                MessageBox.Show(pay.betalinginfo(info));
 			}
 		}
 

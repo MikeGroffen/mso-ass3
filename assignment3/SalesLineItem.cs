@@ -48,6 +48,7 @@ namespace Lab3
         }
 
         //bedrijven hoeven voor een ticket misschien minder btw te betalen dan een ander persoon. de btw word daarom per item berekent en niet op het einde van de verkoop.
+        // echter is op dit moment het btw tarief nog hetzelfde voor iedereen. de functie is met gedachte voor de toekomst al geplaats. 
         public float CalcSubtotaalBTW(UIInfo info)
         {
             Ticket ticket = new Ticket();

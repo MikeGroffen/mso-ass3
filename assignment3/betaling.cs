@@ -11,7 +11,7 @@ namespace Lab3
 
         public void betaalmethode (UIInfo info)
         {
-            // Pay
+            //kiest de betaalmethode die de gebruiker heeft aangeklikt
             switch (info.Payment)
             {
                 case UIPayment.CreditCard:
@@ -33,6 +33,12 @@ namespace Lab3
                     coin.stoppa();
                     break;
             }
+        }
+
+        public string betalinginfo(UIInfo info)
+        {
+            string payment = info.Payment.ToString();
+            return "Payment Method: " + payment + "\n" + "Date of pay: " + DateTime.Now;
         }
     }
 }

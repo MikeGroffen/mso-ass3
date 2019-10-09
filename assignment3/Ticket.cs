@@ -17,7 +17,8 @@ namespace Lab3
 
         public void GetTreininfo()
         {
-            //we hebben nog geen treininformatie aanwezig van de treinen. deze functie kan het informatie eventueel ophalen uit een database.
+            //we hebben nog geen treininformatie aanwezig van de treinen. deze functie kan het informatie eventueel ophalen uit een database. deze functie doet hetzelfde als 
+            //getticketinfo alleen dan met de treininformatie
         }
 
         public string GetTicketInfo(UIInfo info)
@@ -25,9 +26,8 @@ namespace Lab3
             string clss = info.Class.ToString();
             string type = info.Way.ToString();
             string discount = info.Discount.ToString();
-            string payment = info.Payment.ToString();
 
-            return "class: " + clss + "\n" + "Tickettype: " + type + "\n" + "Discount: " + discount + "\n" + "Payment Method: " + payment;
+            return "class: " + clss + "\n" + "Tickettype: " + type + "\n" + "Discount: " + discount + "\n";
         }
     }
 }
