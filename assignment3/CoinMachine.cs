@@ -3,7 +3,7 @@ using System.Windows.Forms;
 
 namespace Lab3
 {
-	public class IKEAMyntAtare2000
+	public class IKEAMyntAtare2000 
 	{
 		public void starta()
 		{

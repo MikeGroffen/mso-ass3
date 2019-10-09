@@ -32,9 +32,11 @@ namespace Lab3
             { 
                 sales sale = new sales();
                 Ticket ticket = new Ticket();
-
+                betaling pay = new betaling();
+                pay.prijs = sale.CalcTotal(info);
+                pay.betaalmethode(info);
                 // Pay
-                switch (info.Payment)
+                /* switch (info.Payment)
                 {
                     case UIPayment.CreditCard:
                         CreditCard c = new CreditCard();
@@ -54,7 +56,7 @@ namespace Lab3
                         coin.betala((int)Math.Round(sale.CalcTotal(info) * 100));
                         coin.stoppa();
                         break;
-                }
+                } */
 
                 MessageBox.Show(ticket.GetTicketInfo(info));
 			}
