@@ -7,23 +7,23 @@ namespace Lab3
 	{
 		public void starta()
 		{
-			MessageBox.Show ("Välkommen till IKEA Mynt Ätare 2000");
+			MessageBox.Show ("Welcome!");
 		}
 
 		public void stoppa()
 		{
-			MessageBox.Show ("Hejdå!");
+			MessageBox.Show ("Goodbye!");
 		}
 
-		public void betala(int pris)
+		public void betala(float pris)
 		{
-            MessageBox.Show (pris + " cent" );
+            MessageBox.Show (0.05 * (int)Math.Round(pris / 0.05) + " EUR" );
 		}
         
         public override void Betaalmethode(UIInfo info, float prijs)
         {
             starta();
-            betala((int)Math.Round(prijs * 100));
+            betala(prijs); 
             stoppa();
         }
 	}

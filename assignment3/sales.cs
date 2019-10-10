@@ -12,7 +12,7 @@ namespace Lab3
 
         // deze classe is ook handig voor later. op dit moment is het mogelijk om 1 ticket tegelijk te kopen, later willen we dit aanpassen naar meer tickets tegelijk en verschillende tickets
         //bijvoorbeeld utrecht - gouda en gouda - den haag. en natuurlijk hoeveel tickets van bijvoorbeeld utrecht naar gouda.
-        int Amount = 1;
+        public int Amount = 1;
         private betaling _betaling;
 
         public float CalcTotal(UIInfo info)

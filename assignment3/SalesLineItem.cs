@@ -23,14 +23,10 @@ namespace Lab3
                 price *= 2;
             }
 
-            // Add 50 cent if paying with credit card
-            if (info.Payment == UIPayment.CreditCard)
-            {
-                price += 0.50f;
-            }
 
             return price;
         }
+
 
         //bedrijven hoeven voor een ticket misschien minder btw te betalen dan een ander persoon. de btw word daarom per item berekent en niet op het einde van de verkoop.
         // echter is op dit moment het btw tarief nog hetzelfde voor iedereen. de functie is met gedachte voor de toekomst al geplaats. 

@@ -3,17 +3,8 @@ using System.Windows.Forms;
 
 namespace Lab3
 {
-	public interface ICard
-	{
-		void Connect();
-		void Disconnect();
-		int BeginTransaction(float amount);
-		bool EndTransaction(int id);
-		void CancelTransaction(int id);
-	}
-
     // Mock CreditCard implementation
-    class CreditCard : betaling //: ICard 
+    class CreditCard : betaling  
     {
         public void Connect()
         {
@@ -51,14 +42,14 @@ namespace Lab3
         public override void Betaalmethode(UIInfo info, float prijs)
         {
             Connect();
-            int ccid = BeginTransaction(prijs);
+            int ccid = BeginTransaction(prijs + 0.50f);     //een creditcard transactie kost 50 cent duurder. deze 50 cent is al inclusief btw en word daarom hier pas toepast
             EndTransaction(ccid);
             Disconnect();
         }
     }
 
 	// Mock CreditCard implementation
-	class DebitCard : betaling // : ICard
+	class DebitCard : betaling 
 	{
 		public void Connect ()
 		{
