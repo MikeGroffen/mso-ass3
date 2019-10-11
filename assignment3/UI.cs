@@ -25,18 +25,19 @@ namespace Lab3
 
 		private void handlePayment(UIInfo info)
 		{
-            //checkt of het vertrek station niet hetzelfde is als het aankomst station. dit mag namelijk niet.
+            //checkt of het vertrek station niet hetzelfde is als het aankomst station. 
+            //Dit mag namelijk niet. Anders kan je alle tickets gratis afdrukken en kunnen mensen dit gebruiken om het systeem te saboteren.
             if (info.From == info.To)
                 MessageBox.Show("Aankomst station mag niet hetzelfde zijn als vertrek station!");
             else
             { 
                 sales sale = new sales();
-
                 sale.payment(info);
-                MessageBox.Show(sale.betalinginfo(info, sale.CalcTotal(info)));
 
-                Ticket ticket = new Ticket();
-                MessageBox.Show(ticket.GetTicketInfo(info));
+                Printer printer = new Printer();
+                if (printer.PrinterStatus)      //checkt of de printer actief is, zoja print de tickets en het bonnetje, geef foutmelding
+                    printer.print(info);
+                else MessageBox.Show("Papier op! Medewerker word geroepen... even geduld s.v.p");
 			}
 		}
 
